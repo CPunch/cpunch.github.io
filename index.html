@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<script>
+		var id = 0
+		var imgcycle = [["cock.jpg", "click to get him back in the box"], 
+		["cockbox.jpg", "click to take him out da box"]]
+		function putcock() {
+			id = id + 1
+			if (id >= imgcycle.length) {
+				id = 0
+			}
+			cockpic.src = imgcycle[id][0]
+			headertext.innerText = imgcycle[id][1]
+		}
+	</script>
+	<body onclick="putcock()">
+		<h id="headertext">click the cock to put him in a box</h>
+		<br>
+		<img src="cock.jpg" id="cockpic" width=720>
+	</body>
+</html>
