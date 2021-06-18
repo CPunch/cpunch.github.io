@@ -3,9 +3,14 @@
 <html lang="en">
 	<script>
 		var id = 0
+		var startedAudio = false
 		var imgcycle = [["cock.jpg", "click to get him back in the box"], 
 		["cockbox.jpg", "click to take him out da box"]]
 		function putcock() {
+			if (!startedAudio) {
+				new Audio('yummy.mp3').play();
+				startedAudio = true
+			}
 			id = id + 1
 			if (id >= imgcycle.length) {
 				id = 0
@@ -15,6 +20,7 @@
 		}
 	</script>
 	<body onclick="putcock()">
+		<audio preload><source src="yummy.mp3"></audio>
 		<h id="headertext">click the cock to put him in a box</h>
 		<br>
 		<img src="cock.jpg" id="cockpic" width=720>
